@@ -29,7 +29,7 @@ class Tree:
         self.inorder_helper(current_node.left, values)
 
         # add current_node to list of explored_nodes
-        values.append(current_node)
+        values.append(current_node.val)
 
         # call inorder_helper on right child
         self.inorder_helper(current_node.right, values)
@@ -49,7 +49,7 @@ class Tree:
             return explored_nodes
         
         # add current_node to list of explored_nodes
-        explored_nodes.append(current_node)
+        explored_nodes.append(current_node.val)
         # call preorder_helper on left child
         self.preorder_helper(current_node.left, explored_nodes)
         # call preorder_helper on right child
@@ -73,6 +73,6 @@ class Tree:
         # call postorder_helper on right child
         self.postorder_helper(current_node.right, values)
         # add current_node to list of explored_nodes
-        values.append(current_node)
+        values.append(current_node.val)
 
         return values
